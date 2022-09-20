@@ -14,5 +14,5 @@ export function Router() {
         <Route path='/success' element={<Success />} />
       </Route>
     </Routes>
-  )
+  );
 }

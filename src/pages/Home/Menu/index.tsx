@@ -2,7 +2,14 @@ import { Minus, Plus, ShoppingCart } from 'phosphor-react';
 
 import { coffees } from '../../../data/coffees';
 
-import { MenuContainer, CartButton, MenuList, MenuItem, TagContainer, FooterContainer } from './styles';
+import {
+  MenuContainer,
+  CartButton,
+  MenuList,
+  MenuItem,
+  TagContainer,
+  FooterContainer
+} from './styles';
 
 export function Menu() {
   return (
@@ -15,7 +22,7 @@ export function Menu() {
             <img src={coffee.image} alt={coffee.name} />
 
             <TagContainer>
-              {coffee.tags.map(tag => <span>{tag}</span>)}
+              {coffee.tags.map(tag => <span key={tag}>{tag}</span>)}
             </TagContainer>
             
             <h3>{coffee.name}</h3>
