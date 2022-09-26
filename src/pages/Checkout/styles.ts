@@ -102,3 +102,70 @@ export const AddressFormContainer = styled.form`
     }
   }
 `;
+
+export const PaymentContainer = styled.section`
+  margin-top: 0.75rem;
+  background: ${props => props.theme["base-card"]};
+  padding: 2.5rem;
+  border-radius: 6px;
+
+  div:nth-child(1) {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    svg {
+      color: ${props => props.theme.purple};
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem;
+
+      span {
+        line-height: 1.3;
+        font-size: 0.875rem;
+        color: ${props => props.theme["base-text"]};
+      }
+      
+      span:first-of-type {
+        font-size: 1rem;
+        color: ${props => props.theme["base-subtitle"]};
+      }
+    }
+  }
+
+  > div:nth-child(2) {
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+    height: 3.25rem;
+
+    button {
+      display: flex;
+      align-items: center;
+      font-size: 0.625rem;
+      gap: 0.75rem;
+      padding: 1rem 0 1rem 1rem;
+      background: ${props => props.theme["base-button"]};
+      color: ${props => props.theme["base-text"]};
+      border: 1px solid ${props => props.theme["base-button"]};
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      svg {
+        color: ${props => props.theme.purple};
+      }
+      
+      :hover {
+        color: ${props => props.theme["base-subtitle"]};
+        background: ${props => props.theme["base-hover"]};
+        border: 1px solid ${props => props.theme["base-hover"]};
+      }
+    }
+  }
+`

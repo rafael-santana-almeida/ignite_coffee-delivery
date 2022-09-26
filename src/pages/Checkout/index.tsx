@@ -1,11 +1,12 @@
-import { Bank, CreditCard, MapPin, Minus, Money, Plus, Trash } from "phosphor-react";
+import { Bank, CreditCard, CurrencyDollar, MapPin, Minus, Money, Plus, Trash } from "phosphor-react";
 import coffeeImage from "../../assets/coffees/american.svg";
 
 import {
   CheckoutContainer,
   CompleteYourOrderContainer,
   AddressContainer,
-  AddressFormContainer
+  AddressFormContainer,
+  PaymentContainer
 } from "./styles";
 
 export function Checkout() {
@@ -46,9 +47,10 @@ export function Checkout() {
           </AddressFormContainer>
         </AddressContainer>
 
-        <div>
+        <PaymentContainer>
           <div>
-            <MapPin />
+            <CurrencyDollar size={22} />
+
             <div>
               <span>Pagamento</span>
               <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
@@ -57,21 +59,21 @@ export function Checkout() {
 
           <div>
             <button>
-              <CreditCard />
+              <CreditCard size={16} />
               CARTÃO DE CRÉDITO
             </button>
 
             <button>
-              <Bank />
+              <Bank size={16} />
               CARTÃO DE DÉBITO
             </button>
 
             <button>
-              <Money />
+              <Money size={16} />
               DINHEIRO
             </button>
           </div>
-        </div>
+        </PaymentContainer>
       </CompleteYourOrderContainer>
 
       <div>
