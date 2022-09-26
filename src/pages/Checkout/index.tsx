@@ -1,26 +1,37 @@
 import { Bank, CreditCard, MapPin, Minus, Money, Plus, Trash } from "phosphor-react";
 import coffeeImage from "../../assets/coffees/american.svg";
 
-import { CheckoutContainer } from "./styles";
+import {
+  CheckoutContainer,
+  CompleteYourOrderContainer,
+  AddressContainer,
+  AddressFormContainer
+} from "./styles";
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <div>
+      <CompleteYourOrderContainer>
         <h3>Complete seu pedido</h3>
 
-        <div>
+        <AddressContainer>
           <div>
-            <MapPin />
+            <MapPin size={22} />
+
             <div>
               <span>Endereço de entrega</span>
               <span>Informe o endereço onde deseja receber seu pedido</span>
             </div>
           </div>
 
-          <form>
-            <input placeholder="CEP" />
-            <input placeholder="Rua" />
+          <AddressFormContainer>
+            <div>
+              <input placeholder="CEP" />
+            </div>
+            
+            <div>
+              <input placeholder="Rua" />
+            </div>
 
             <div>
               <input placeholder="Número" />
@@ -32,8 +43,8 @@ export function Checkout() {
               <input placeholder="Cidade" />
               <input placeholder="UF" />
             </div>
-          </form>
-        </div>
+          </AddressFormContainer>
+        </AddressContainer>
 
         <div>
           <div>
@@ -61,7 +72,7 @@ export function Checkout() {
             </button>
           </div>
         </div>
-      </div>
+      </CompleteYourOrderContainer>
 
       <div>
         <h3>Cafés selecionados</h3>
